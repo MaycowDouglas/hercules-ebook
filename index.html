@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          sans: 'Titillium Web',
+        },
+        container: {
+          center: true,
+          padding: {
+            DEFAULT: '1rem',
+            sm: '2rem',
+            lg: '4rem',
+            xl: '5rem',
+            '2xl': '6rem',
+          },
+        },
+        extend: {
+          colors: {
+            primary: {
+              100: '#144217',
+              200: '#113514',
+              300: '#0A180B',
+            },
+            secondary: '#ECB800',
+          },
+        },
+      }
+    }
+  </script>
+
+  <style>
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #737373;
+    }
+
+    .triangulo-para-baixo {
+      width: 0;
+      height: 0;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      border-top: 25px solid;
+    }
+
+    .youtube-video-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .youtube-video-container::after {
+      display: block;
+      content: "";
+      padding-top: 56.25%;
+    }
+
+    .youtube-video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="relative bg-primary-300 text-white">
+    <img src="images/main-bg.png" class="absolute z-10 left-0 right-0" alt="">
+    <div
+      class="relative z-20 container py-10 xl:pb-28 flex flex-col md:flex-row-reverse items-center space-y-10 md:space-y-10 md:gap-10">
+      <div class="md:w-5/12">
+        <img src="images/book.png" class="w-full h-auto"
+          alt="Livro - Ciência e Prática do Fitness Funcional por Ramires Tibana e Nuno Sousa">
+      </div>
+      <div class="flex-1">
+        <h1 class="font-bold text-2xl lg:text-3xl xl:text-5xl xl:leading-tight uppercase">Adquira em primeira mão o mais
+          atual e completo livro sobre <em class="not-italic bg-secondary text-primary-100 px-1">o Fitness Functional no
+            Brasil!</em></h1>
+        <p class="xl:w-10/12 mt-6 mb-8 lg:text-lg xl:text-2xl">Depois de muitas pesquisas e estudos, Dr. Ramires Tibana
+          e Dr. Nuno Sousa lançam sua nova obra e você pode
+          adquirir agora mesmo!</p>
+        <a href=""
+          class="md:text-lg lg:text-2xl xl:text-3xl w-full md:w-auto inline-flex items-center justify-center uppercase rounded-xl xl:rounded-3xl py-3 px-20 lg:py-5 xl:py-7 bg-secondary text-primary-300 font-semibold">compre
+          agora</a>
+      </div>
+    </div>
+  </main>
+
+  <section class="bg-neutral-100">
+    <div class="container py-10 lg:py-20">
+      <div class="text-center">
+        <h2 class="uppercase text-primary-100 text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-bold mb-2 xl:mb-4">O que
+          você vai
+          encontrar</h2>
+        <p class="text-primary-100 md:w-2/3 xl:w-1/2 md:mx-auto xl:text-lg">Depois de muitas pesquisas e estudos, Dr.
+          Ramires Tibana e Dr. Nuno Sousa
+          lançam sua nova obra e você pode adquirir agora mesmo!</p>
+      </div>
+
+      <ul class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 xl:gap-y-16">
+        <li class="bg-gradient-to-b from-neutral-200 to-transparent rounded-lg lg:rounded-2xl p-5 md:p-10 text-center">
+          <h3 class="uppercase text-primary-100 font-bold text-2xl xl:text-3xl">Capítulo 1</h3>
+          <p>Introdução ao Fitness Funcional</p>
+        </li>
+        <li class="bg-gradient-to-b from-neutral-200 to-transparent rounded-lg lg:rounded-2xl p-5 md:p-10 text-center">
+          <h3 class="uppercase text-primary-100 font-bold text-2xl xl:text-3xl">Capítulo 2</h3>
+          <p>Sistemas energéticos no Fitness Funcional</p>
+        </li>
+        <li class="bg-gradient-to-b from-neutral-200 to-transparent rounded-lg lg:rounded-2xl p-5 md:p-10 text-center">
+          <h3 class="uppercase text-primary-100 font-bold text-2xl xl:text-3xl">Capítulo 3</h3>
+          <p>Sistemas energéticos no Fitness Funcional</p>
+        </li>
+        <li class="bg-gradient-to-b from-neutral-200 to-transparent rounded-lg lg:rounded-2xl p-5 md:p-10 text-center">
+          <h3 class="uppercase text-primary-100 font-bold text-2xl xl:text-3xl">Capítulo 4</h3>
+          <p>Introdução ao Fitness Funcional</p>
+        </li>
+        <li class="bg-gradient-to-b from-neutral-200 to-transparent rounded-lg lg:rounded-2xl p-5 md:p-10 text-center">
+          <h3 class="uppercase text-primary-100 font-bold text-2xl xl:text-3xl">Capítulo 5</h3>
+          <p>Sistemas energéticos no Fitness Funcional</p>
+        </li>
+        <li class="bg-gradient-to-b from-neutral-200 to-transparent rounded-lg lg:rounded-2xl p-5 md:p-10 text-center">
+          <h3 class="uppercase text-primary-100 font-bold text-2xl xl:text-3xl">Capítulo 6</h3>
+          <p>Sistemas energéticos no Fitness Funcional</p>
+        </li>
+        <li class="bg-gradient-to-b from-neutral-200 to-transparent rounded-lg lg:rounded-2xl p-5 md:p-10 text-center">
+          <h3 class="uppercase text-primary-100 font-bold text-2xl xl:text-3xl">Capítulo 7</h3>
+          <p>Introdução ao Fitness Funcional</p>
+        </li>
+        <li class="bg-gradient-to-b from-neutral-200 to-transparent rounded-lg lg:rounded-2xl p-5 md:p-10 text-center">
+          <h3 class="uppercase text-primary-100 font-bold text-2xl xl:text-3xl">Capítulo 8</h3>
+          <p>Sistemas energéticos no Fitness Funcional</p>
+        </li>
+        <li class="bg-gradient-to-b from-neutral-200 to-transparent rounded-lg lg:rounded-2xl p-5 md:p-10 text-center">
+          <h3 class="uppercase text-primary-100 font-bold text-2xl xl:text-3xl">Capítulo 9</h3>
+          <p>Sistemas energéticos no Fitness Funcional</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="relative bg-gradient-to-b from-secondary to-transparent">
+    <a href=""
+      class="min-w-44 bg-secondary absolute -translate-y-1/2 left-1/2 -translate-x-1/2 md:text-2xl uppercase border-2 border-neutral-100 text-primary-100 font-semibold rounded-xl px-5 py-4 md:px-8 inline-flex items-center justify-center">Comprar
+      agora</a>
+
+    <div class="container py-20 text-center">
+      <h2 class="uppercase text-primary-100 text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-bold mb-5 xl:mb-10">
+        Mensagem do autor
+      </h2>
+
+      <div class="y-20 flex justify-center items-center">
+        <div class="youtube-video-container xl:w-8/12">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/TNN0sUg6l8w?si=2AIZsXk-Bua0THt4"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-primary-300">
+    <div class="container py-10 lg:py-20">
+      <h2
+        class="uppercase text-center text-white text-2xl md:text-4xl lg:text-5xl xl:text-6xl md:w-4/5 md:mx-auto font-bold mb-2 xl:mb-10">
+        Veja o que diz quem já leu os livros dos autores:</h2>
+
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide text-white py-10 md:px-20 xl:px-32 flex justify-center items-center">
+            <div class="relative border-2 border-neutral-400 p-5 md:p-10 xl:px-16  rounded-2xl">
+              <h3 class="font-bold text-xl md:text-2xl lg:text-3xl mb-3">Cosme Ribeiro</h3>
+              <p class="lg:text-lg xl:tetx-xl">Leitura indispensável para os amantes e profissionais da área, traz
+                informações valiosas para a
+                prescrição e periodização no treinamento de alta intensidade.</p>
+
+              <div class="w-1/2 md:w-1/3 lg:w-1/4 mt-5">
+                <img src="/images//stars.png" class="w-full h-auto" alt="">
+              </div>
+
+              <div class="absolute bottom-0">
+                <div class="triangulo-para-baixo border-t-[25px] border-t-neutral-400 absolute"></div>
+                <div class="triangulo-para-baixo border-t-[25px] border-t-primary-300 absolute -top-1"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide text-white py-10 md:px-20 xl:px-32 flex justify-center items-center">
+            <div class="relative border-2 border-neutral-400 p-5 md:p-10 xl:px-16  rounded-2xl">
+              <h3 class="font-bold text-xl md:text-2xl lg:text-3xl mb-3">Cosme Ribeiro</h3>
+              <p class="lg:text-lg xl:tetx-xl">Leitura indispensável para os amantes e profissionais da área, traz
+                informações valiosas para a
+                prescrição e periodização no treinamento de alta intensidade.</p>
+
+              <div class="w-1/2 md:w-1/3 lg:w-1/4 mt-5">
+                <img src="/images//stars.png" class="w-full h-auto" alt="">
+              </div>
+
+              <div class="absolute bottom-0">
+                <div class="triangulo-para-baixo border-t-[25px] border-t-neutral-400 absolute"></div>
+                <div class="triangulo-para-baixo border-t-[25px] border-t-primary-300 absolute -top-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container py-10 lg:py-20">
+      <h2
+        class="uppercase text-center text-primary-100 text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-bold mb-5 xl:mb-10">
+        Sobre os autores
+      </h2>
+
+      <div
+        class="flex flex-col space-y-10 md:flex-row-reverse md:space-y-0 md:gap-10 lg:gap-20 xl:gap-28 md:items-center">
+        <div class="md:flex-1">
+          <img src="/images/autor-ramires.png" alt="">
+        </div>
+        <div class="md:w-1/2">
+          <h2 class="text-primary-100 text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-bold">Ramires Tibana</h2>
+          <p class="text-primary-100 xl:text-xl mt-3 mb-6 lg:mt-5 lg:mb-9">Doutor em educação física, Ramires Tibana se
+            dedica há anos ao estudo e pesquisa do Fitness Funcional e
+            controle de força. Atualmente é o head coach do Hércules Functional, o programa de treinamento de centenas
+            de atletas pelo Brasil e mundo.</p>
+          <a href=""
+            class="bg-secondary md:text-lg lg:text-xl xl:text-2xl px-7 py-3 lg:px-9 inline-flex items-center justify-center font-semibold text-primary-100 rounded-xl">Currículo
+            lates</a>
+        </div>
+      </div>
+
+      <div class="flex flex-col space-y-10 md:flex-row md:space-y-0 md:gap-10 lg:gap-20 xl:gap-28 md:items-center">
+        <div class="md:flex-1">
+          <img src="/images/autor-nuno.png" alt="">
+        </div>
+        <div class="md:w-1/2">
+          <h2 class="text-primary-100 text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-bold">Nuno Sousa</h2>
+          <p class="text-primary-100 xl:text-xl mt-3 mb-6 lg:mt-5 lg:mb-9">Doutor em educação física, com experiência na
+            área da fisiologia do exercício com ênfase em treinamento físico e doenças crônicas degenerativas não
+            transmissíveis, atuando principalmente na linha de pesquisa que investiga as alterações agudas e crônicas do
+            exercício físico em diferentes modelos experimentais.</p>
+          <a href=""
+            class="bg-secondary md:text-lg lg:text-xl xl:text-2xl px-7 py-3 lg:px-9 inline-flex items-center justify-center font-semibold text-primary-100 rounded-xl">Currículo
+            lates</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-primary-300">
+    <div class="container py-10 lg:py-20">
+      <h2
+        class="uppercase text-center text-secondary text-3xl md:text-4xl lg:text-5xl xl:text-6xl md:w-4/5 md:mx-auto font-bold mb-2 xl:mb-10">
+        Aproveite a <em class="not-italic bg-primary-100 text-white">oferta</em> de lançamento!</h2>
+
+      <div class="flex flex-col md:flex-row-reverse items-center mt-5 md:mt-10 gap-10">
+        <div class="flex-1 hidden md:block">
+          <img src="/images/book.png" class="w-full h-auto mx-auto" alt="">
+        </div>
+        <div class="flex-1 text-center md:text-left text-white">
+          <p class="text-3xl lg:text-4xl xl:text-5xl font-bold">Adquira agora mesmo e receba na sua casa!</p>
+
+          <p class="mt-4 text-2xl xl:text-4xl font-bold">Pré-lançamento:</p>
+
+          <p class="font-bold flex justify-center md:justify-start items-center gap-1">
+            <span class="text-2xl xl:text-4xl">R$</span>
+            <span class="text-7xl xl:text-8xl">99</span>
+            <span class="text-2xl xl:text-4xl">,00</span>
+          </p>
+
+          <p class="my-5 text-lg xl:text-2xl text-secondary flex justify-center md:justify-start items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-8" viewBox="0 0 94 66" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M91.373 30.549C89.692 28.523 88.373 26.862 86.693 24.837C84.553 19.987 82.4127 15.1377 80.272 10.289C79.9758 9.59386 79.4797 9.00241 78.8468 8.5897C78.2138 8.177 77.4726 7.96165 76.717 7.971H57.368C56.8527 7.97179 56.3587 8.17686 55.9943 8.54126C55.6299 8.90566 55.4248 9.39966 55.424 9.915V35.867C55.4237 36.1245 55.3214 36.3715 55.1394 36.5537C54.9574 36.7359 54.7105 36.8385 54.453 36.839H0V51.961C0.00158626 52.7335 0.309243 53.4739 0.855596 54.0201C1.40195 54.5663 2.14247 54.8737 2.915 54.875H3.993C4.40338 52.1235 5.78826 49.6109 7.89547 47.7947C10.0027 45.9785 12.6921 44.9794 15.474 44.9794C18.2559 44.9794 20.9453 45.9785 23.0525 47.7947C25.1597 49.6109 26.5446 52.1235 26.955 54.875H66.325C66.7354 52.1235 68.1203 49.6109 70.2275 47.7947C72.3347 45.9785 75.0241 44.9794 77.806 44.9794C80.5879 44.9794 83.2773 45.9785 85.3845 47.7947C87.4917 49.6109 88.8766 52.1235 89.287 54.875H90.365C91.1375 54.8737 91.878 54.5663 92.4244 54.0201C92.9708 53.4739 93.2784 52.7335 93.28 51.961V35.914C93.28 33.231 93.091 32.618 91.373 30.549ZM69.465 33.027H63.64C63.4582 33.0319 63.2773 33.0004 63.1079 32.9342C62.9386 32.8681 62.7842 32.7687 62.6539 32.6418C62.5236 32.515 62.42 32.3634 62.3493 32.1958C62.2785 32.0283 62.2421 31.8483 62.2421 31.6665C62.2421 31.4847 62.2785 31.3047 62.3493 31.1372C62.42 30.9696 62.5236 30.818 62.6539 30.6912C62.7842 30.5644 62.9386 30.4649 63.1079 30.3988C63.2773 30.3326 63.4582 30.3011 63.64 30.306H69.47C69.8244 30.3156 70.1611 30.4632 70.4084 30.7173C70.6557 30.9714 70.7941 31.3119 70.7941 31.6665C70.7941 32.0211 70.6557 32.3616 70.4084 32.6157C70.1611 32.8698 69.8244 33.0174 69.47 33.027H69.465ZM79.895 25.27C79.8085 25.4071 79.6882 25.5197 79.5456 25.5969C79.4031 25.6741 79.2431 25.7134 79.081 25.711H63.64C63.1248 25.7102 62.631 25.5053 62.2666 25.1411C61.9022 24.7769 61.6971 24.2832 61.696 23.768V15.296C61.6971 14.7808 61.9022 14.2871 62.2666 13.9229C62.631 13.5587 63.1248 13.3538 63.64 13.353H73.851C74.2287 13.3483 74.5993 13.4559 74.9158 13.6621C75.2323 13.8682 75.4805 14.1637 75.629 14.511L79.97 24.347C80.0375 24.4944 80.066 24.6567 80.0529 24.8183C80.0397 24.9799 79.9854 25.1354 79.895 25.27ZM52.704 34.118H0V1.947C0.00105364 1.43253 0.205689 0.939382 0.569196 0.575314C0.932702 0.211245 1.42553 0.00584831 1.94 0.00399971H17.831V17.061C17.831 17.4217 17.9743 17.7676 18.2293 18.0227C18.4844 18.2777 18.8303 18.421 19.191 18.421H33.513C33.8737 18.421 34.2196 18.2777 34.4747 18.0227C34.7297 17.7676 34.873 17.4217 34.873 17.061V0.00399971H50.761C51.276 0.00505665 51.7696 0.210104 52.1337 0.574259C52.4979 0.938413 52.7029 1.43201 52.704 1.947V34.118ZM32.153 15.7H20.553V0H32.153V15.7ZM15.474 47.7C13.7163 47.7 11.998 48.2212 10.5365 49.1978C9.07506 50.1744 7.93599 51.5624 7.26339 53.1863C6.59078 54.8103 6.41485 56.5972 6.75783 58.3211C7.10082 60.0451 7.94733 61.6286 9.1903 62.8714C10.4333 64.1142 12.0169 64.9606 13.7408 65.3034C15.4648 65.6462 17.2517 65.47 18.8756 64.7972C20.4995 64.1244 21.8874 62.9852 22.8638 61.5236C23.8402 60.062 24.3612 58.3437 24.361 56.586C24.3602 54.2296 23.4235 51.9701 21.7569 50.3042C20.0904 48.6384 17.8304 47.7027 15.474 47.703V47.7ZM15.474 61.826C14.4376 61.8262 13.4244 61.519 12.5625 60.9434C11.7007 60.3677 11.0289 59.5494 10.6322 58.5919C10.2354 57.6345 10.1315 56.5809 10.3336 55.5643C10.5356 54.5478 11.0346 53.614 11.7674 52.8811C12.5002 52.1482 13.4339 51.649 14.4504 51.4468C15.4668 51.2445 16.5205 51.3482 17.478 51.7448C18.4356 52.1413 19.254 52.813 19.8298 53.6747C20.4057 54.5364 20.713 55.5496 20.713 56.586C20.7134 57.2743 20.5782 57.9559 20.3151 58.5919C20.052 59.228 19.6662 59.8059 19.1797 60.2928C18.6931 60.7797 18.1155 61.166 17.4796 61.4296C16.8438 61.6931 16.1623 61.8289 15.474 61.829V61.826ZM17.993 56.586C17.9932 57.0843 17.8456 57.5714 17.569 57.9857C17.2923 58.4001 16.8989 58.7232 16.4387 58.914C15.9784 59.1048 15.4719 59.1548 14.9832 59.0577C14.4945 58.9606 14.0455 58.7208 13.6932 58.3686C13.3408 58.0163 13.1008 57.5675 13.0035 57.0788C12.9062 56.5901 12.956 56.0836 13.1467 55.6233C13.3373 55.1629 13.6601 54.7694 14.0744 54.4926C14.4887 54.2158 14.9757 54.068 15.474 54.068C15.805 54.068 16.1327 54.1332 16.4384 54.2599C16.7442 54.3867 17.022 54.5724 17.2559 54.8065C17.4898 55.0406 17.6754 55.3186 17.8018 55.6244C17.9283 55.9303 17.9933 56.258 17.993 56.589V56.586ZM77.806 47.7C76.0483 47.7 74.33 48.2212 72.8685 49.1978C71.4071 50.1744 70.268 51.5624 69.5954 53.1863C68.9228 54.8103 68.7468 56.5972 69.0898 58.3211C69.4328 60.0451 70.2793 61.6286 71.5223 62.8714C72.7653 64.1142 74.3489 64.9606 76.0728 65.3034C77.7968 65.6462 79.5837 65.47 81.2076 64.7972C82.8315 64.1244 84.2194 62.9852 85.1958 61.5236C86.1721 60.062 86.6932 58.3437 86.693 56.586C86.6922 54.2296 85.7555 51.9701 84.0889 50.3042C82.4224 48.6384 80.1624 47.7027 77.806 47.703V47.7ZM77.806 61.826C76.7696 61.826 75.7565 61.5187 74.8948 60.9429C74.0331 60.3671 73.3615 59.5487 72.9649 58.5913C72.5683 57.6338 72.4645 56.5802 72.6667 55.5637C72.8689 54.5473 73.3679 53.6136 74.1008 52.8808C74.8336 52.1479 75.7673 51.6489 76.7837 51.4467C77.8002 51.2445 78.8538 51.3483 79.8113 51.7449C80.7687 52.1415 81.5871 52.8131 82.1629 53.6748C82.7387 54.5365 83.046 55.5496 83.046 56.586C83.0464 57.2744 82.9111 57.9561 82.648 58.5922C82.3848 59.2283 81.9989 59.8063 81.5123 60.2932C81.0257 60.7801 80.4479 61.1663 79.812 61.4298C79.176 61.6934 78.4944 61.829 77.806 61.829V61.826ZM80.325 56.586C80.3252 57.0843 80.1776 57.5714 79.901 57.9857C79.6243 58.4001 79.2309 58.7232 78.7707 58.914C78.3104 59.1048 77.8039 59.1548 77.3152 59.0577C76.8265 58.9606 76.3775 58.7208 76.0252 58.3686C75.6728 58.0163 75.4327 57.5675 75.3355 57.0788C75.2382 56.5901 75.288 56.0836 75.4787 55.6233C75.6693 55.1629 75.9921 54.7694 76.4064 54.4926C76.8207 54.2158 77.3077 54.068 77.806 54.068C78.137 54.0679 78.4648 54.133 78.7706 54.2597C79.0764 54.3863 79.3542 54.5721 79.5882 54.8062C79.8222 55.0404 80.0077 55.3183 80.1341 55.6243C80.2605 55.9302 80.3254 56.258 80.325 56.589V56.586Z"
+                fill="#ECB800" />
+            </svg>
+            Frete grátis para todo Brasil!!!
+          </p>
+
+          <p class="mb-3 text-xl xl:text-2xl">Formas de Pagamento</p>
+
+          <div class="w-4/5 mx-auto md:mx-0">
+            <img src="/images/payment-methods.png" class="w-full h-auto" alt="">
+          </div>
+
+          <a href=""
+            class="mt-8 md:text-lg lg:text-2xl xl:text-3xl w-full md:w-auto inline-flex items-center justify-center uppercase rounded-xl xl:rounded-3xl py-3 px-20 lg:py-5 xl:py-7 bg-secondary text-primary-300 font-semibold">compre
+            agora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-primary-100">
+    <div class="container py-5 flex flex-col md:flex-row md:justify-between items-center">
+      <p class="text-white text-2xl xl:text-4xl text-center font-bold mb-5 md:mb-0 md:text-left">Ciência e prática do <br> fitness funcional</p>
+      <ul class="flex gap-2">
+        <li><a href="" class="inline-flex w-8"><img src="/images/insta.png" class="w-full h-auto" alt=""></a></li>
+        <li><a href="" class="inline-flex w-8"><img src="/images/face.png" class="w-full h-auto" alt=""></a></li>
+        <li><a href="" class="inline-flex w-8"><img src="/images/youtube.png" class="w-full h-auto" alt=""></a></li>
+      </ul>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      spaceBetween: 20,
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+    });
+  </script>
+</body>
+
+</html>

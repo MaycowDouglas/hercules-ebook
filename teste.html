@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Triângulo com Tailwind CSS</title>
+
+  <style>
+    .triangulo-para-baixo {
+      width: 0; 
+      height: 0; 
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+    }
+    .triangulo-para-baixo.preto {
+      border-top: 25px solid .000;
+    }
+    .triangulo-para-baixo.cinza {
+      border-top: 25px solid #949396;
+    }
+  </style>
+</head>
+<body class="bg-black flex justify-center items-center h-screen">
+  <div class="relative">
+    <div class="triangulo-para-baixo cinza absolute "></div>
+    <div class="triangulo-para-baixo preto absolute -top-1"></div>
+  </div>
+</body>
+</html>
